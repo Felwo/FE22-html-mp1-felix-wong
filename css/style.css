@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(243, 226, 226);
+    font-family: monospace;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(1, 151, 1);
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.75rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+.nav-list ul{
+    display: flex;
+    flex-basis: 2rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+
+.nav-list :hover ~ input:focus {
+    /*color: rgb(212, 46, 57);*/
+    color: white;
+    background-color: black;
+}

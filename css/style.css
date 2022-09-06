@@ -1,15 +1,39 @@
+:root {
+    --clr-background-: rgb(243, 226, 226);
+    --clr-primary-: black;
+    --clr-primary-italic-: rgb(82, 83, 72);
+    --clr-accent-: rgb(1, 151, 1);
+
+    --font-family-heading-: Arial, Helvetica, sans-serif;
+    --font-family-primary-: monospace;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
-    padding: 0;
-    margin: 0;
-    background-color: rgb(243, 226, 226);
-    font-family: monospace;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    background-color: var(--clr-background-);
+    font-family: var(--font-family-primary-);
+}
+
+.kravet{
+    margin-top: 100px;
+}
+
+section{
+    margin: 0 4rem 0 4rem;
 }
 
 h1,
 h2,
 h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(1, 151, 1);
+    font-family: var(--font-family-heading-);
+    color: var(--clr-accent-);
 }
 
 h1 {
@@ -25,18 +49,94 @@ h3 {
 }
 
 p {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    max-width: 35%;
 }
 
-.nav-list ul{
+i{
+    font-size: 1.66rem;
+    color: var(--clr-primary-italic-);
+
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: var(--clr-accent-);
+    background-color: var(--clr-primary-);
+}
+
+a:active{
+    color: var(--clr-accent-);
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color: var(--clr-primary-);
+    text-decoration: none;
+}
+
+.nav-list {
+    background-color: var(--clr-accent-);
+    padding: 0 20px;
+}
+
+.nav-list ul, .nav-list a {
+    font-size: 1.75rem;
     display: flex;
     flex-basis: 2rem;
-    margin: 0.25rem;
+    /*Kravet*/
+    margin: 0 20px 0 20px;
     padding: 0.25rem;
 }
 
-.nav-list :hover ~ input:focus {
-    /*color: rgb(212, 46, 57);*/
-    color: white;
-    background-color: black;
+.nav-list ul :hover {
+    color: var(--clr-background-);
+    background-color: var(--clr-primary-);
+}
+
+.nav-list ul a :active {
+    color: var(--clr-accent-);
+}
+
+.home-info {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.home-info-subcontainer p{
+    max-width: 50%;
+}
+
+#me-pic{
+    max-width: 100%;
+}
+
+#home-quote {
+    max-width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 0 4rem;
+    padding: 0rem;
+}
+
+label, button{
+    font-size: 1.4rem;
+}
+
+form button{
+    margin-top: 1rem;
 }
